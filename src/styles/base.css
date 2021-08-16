@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #202024;
+  font-size: 16px;
+  line-height: 1.42;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: white;
+}
+
+p{
+  margin: 0;
+}
+
+.section{
+  height: 100vh;
+}
+
+#app {
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1480px;
+  width: 95%;
+}
+
+.welcome-section{
+  padding-top: 20px;
+  background-image: url('../../src/images/blik.png');
+  background-position: center bottom 44%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-height: 100vh;
+  position: relative;
+}
+
+.welcome-section:after{
+  content: "Онлайн предсказание";
+  font-size: 16px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  display: block;
+  bottom: 2%;
+  left:50%;
+  transform: translateX(-50%);
+}
+
+.desc-section{
+  max-height: 100vh;
+  opacity: 0;
+  transition: opacity 1.5s;
+}
+
+.questions-section{
+  max-height: 100vh;
+  position: relative;
+}
+
+@media screen and (max-width: 768px){
+  .welcome-section:after{
+    width: 100%;
+    text-align: center;
+  }
+
+  .welcome-section{
+    padding-top: 0;
+  }
+
+  .welcome-component{
+    height: 100%;
+  }
+
+  
+}
+
+@media screen and (max-width: 480px){
+  .desc-section{
+    max-height: unset;
+    height: 140vh;
+  }
+}
